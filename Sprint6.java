@@ -20,10 +20,11 @@ public class Sprint6 {
         int compra = 0;
         int telefon = 0;
 
-        String ventaLliure = "Venta lliure";
+        final String ventaLliure = "Venta lliure";
         final String pensionista = "Pensionista";
         final String carnetJove = "Carnet Jove";
         final String soci = "Soci";
+        String tipusVentaString = "";
     
         boolean error = false;
         int counter = 1;
@@ -63,16 +64,16 @@ public class Sprint6 {
 
                     switch (tipusVenta) {
                         case 0:
-                            ventaLliure = String.valueOf(tipusVenta);
+                            tipusVentaString = ventaLliure;
                             break;
                         case 1:
-                            
+                            tipusVentaString = pensionista;
                             break;
                         case 2:
-                            
+                            tipusVentaString = carnetJove;
                             break;
                         case 3:
-                           
+                            tipusVentaString = soci;
                             break;
                         default:
                             System.out.println("error el tipo de venta es incorrecta");
@@ -105,9 +106,8 @@ public class Sprint6 {
             }
             counter ++;
         }
-        System.out.println("ID: " + id +" | edat: "+edad+ " | Tipos de ventas: " +tipusVenta+ " |Import " +compra+ " | Teléfono " +telefon);
+        System.out.println("ID: " + id +" | edat: "+edad+ " | Tipos de ventas: " +tipusVentaString+ " |Import " +compra+ " | Teléfono " +telefon);
             
             input.close();
         }    
-
 }
