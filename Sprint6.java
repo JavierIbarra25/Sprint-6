@@ -5,14 +5,14 @@ public class Sprint6 {
     public static void main(String[] args) {
         Scanner input = new Scanner (System.in);
 
-        final int idMin = 111;
-        final int idMax = 999;
-        final int edadMin = 14;
-        final int edadMax = 120;
-        final int compraMin = 0;
-        final int compraMax = 1000;
-        final int telefonMin = 111111111;
-        final int telefonMax = 999999999;
+        final int IDMIN = 111;
+        final int IDMAX = 999;
+        final int EDADMIN = 14;
+        final int EDADMAX = 120;
+        final int COMPRARMIN = 0;
+        final int COMPRARMAX = 1000;
+        final int TELEFONMIN = 111111111;
+        final int TELEFONMAX = 999999999;
 
         int id = 0;
         int edad = 0;
@@ -20,14 +20,15 @@ public class Sprint6 {
         int compra = 0;
         int telefon = 0;
 
-        final String ventaLliure = "Venta lliure";
-        final String pensionista = "Pensionista";
-        final String carnetJove = "Carnet Jove";
-        final String soci = "Soci";
+        final String VENTALLIURE = "Venta lliure";
+        final String PENSIONISTA = "Pensionista";
+        final String CARNETJOVE = "Carnet Jove";
+        final String SOCI = "Soci";
         String tipusVentaString = "";
     
         boolean error = false;
         int counter = 1;
+
         while (!error && counter <= 5) {
             
             switch (counter) {
@@ -36,7 +37,7 @@ public class Sprint6 {
                 System.out.println("introducir número de id del cliente");
                 id = input.nextInt();
     
-                if (id < idMin || id > idMax) {
+                if (id < IDMIN || id > IDMAX) {
                     System.out.println("error el id tiene que estar entre 111 y 999");
                     error = true;
                 }
@@ -46,7 +47,7 @@ public class Sprint6 {
                 System.out.println("introducir número de edad del cliente");
                 edad = input.nextInt();
 
-                if (edad < edadMin || edad > edadMax) {
+                if (edad < EDADMIN || edad > EDADMAX) {
                     System.out.println("error la edad tiene que estar entre 14 y 120 ");
                     error=true;
                 }
@@ -64,16 +65,16 @@ public class Sprint6 {
 
                     switch (tipusVenta) {
                         case 0:
-                            tipusVentaString = ventaLliure;
+                            tipusVentaString = VENTALLIURE;
                             break;
                         case 1:
-                            tipusVentaString = pensionista;
+                            tipusVentaString = PENSIONISTA;
                             break;
                         case 2:
-                            tipusVentaString = carnetJove;
+                            tipusVentaString = CARNETJOVE;
                             break;
                         case 3:
-                            tipusVentaString = soci;
+                            tipusVentaString = SOCI;
                             break;
                         default:
                             System.out.println("error el tipo de venta es incorrecta");
@@ -87,7 +88,7 @@ public class Sprint6 {
                 System.out.println("introducir import de la compra");
                 compra = input.nextInt();
     
-                if (compra < compraMin || compra > compraMax) {
+                if (compra < COMPRARMIN || compra > COMPRARMAX) {
                     System.out.println("error la compra tiene que estar entre 0 y 1000");
                     error = true;
                 }
@@ -97,7 +98,7 @@ public class Sprint6 {
                 System.out.println("introducir el número de teléfono");
                 telefon = input.nextInt();
     
-                if (telefon < telefonMin || telefon > telefonMax) {
+                if (telefon < TELEFONMIN|| telefon > TELEFONMAX) {
                     System.out.println("error el número tiene que estar entre 111111111 y 999999999");
                     error = true;
                 }
